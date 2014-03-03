@@ -1,0 +1,11 @@
+2
+A 2 a b
+L
+A 1 c
+L
+R 1
+L
+A 1 d
+A 1 e
+L
+Q
