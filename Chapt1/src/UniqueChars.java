@@ -2,14 +2,13 @@ import java.util.HashMap;
 
 /**
  * This class provides two methods to find out whether a string exists of unique chars.
- * Hashmap vs Array approach.
  * @author bengro
  *
  */
 public class UniqueChars {
 	
 	/*
-	 * An array could be used. If we assume ASCII, we only have 256 indices to check.
+	 * An array could be used instead. If we assume ASCII, we only have 256 indices to check.
 	 */
 	boolean isUniqueHashmap(String input) {
 		HashMap<Character, Integer> hMap = new HashMap<Character, Integer>();
