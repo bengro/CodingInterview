@@ -10,4 +10,4 @@
 5. Definition "String rotation": string of same size and identical letter sequence but with arbitrary offset.
 
 ## Chapter 2: Linked Lists
-
+1. Comparisons with == operator or isEqual: == checks whether two variable point to the same reference. isEqual compares the objects values.

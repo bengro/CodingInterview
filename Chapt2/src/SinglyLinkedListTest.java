@@ -11,9 +11,14 @@ public class SinglyLinkedListTest {
 		SLL.appendTail(3);
 		SLL.appendTail(5);
 		SLL.appendTail(10);
+		SLL.appendTail(10);
+		SLL.appendTail(10);
+		SLL.appendTail(10);
+		SLL.appendTail(5);
+		SLL.print();
+		SLL.removeDuplicates();
 		SLL.print();
 		SLL.deleteFirst();
-		SLL.print();
 		SLL.deleteFirst();
 		SLL.deleteFirst();
 		SLL.deleteFirst();

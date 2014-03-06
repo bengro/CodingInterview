@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 /*
  * This class implements a singly-linked list.
  */
@@ -31,6 +33,7 @@ public class SinglyLinkedList<T> {
 	}
 	
 	void print() {
+		System.out.println("Printing all linked list elements.");
 		if(size == 0) System.out.println("Empty list.");
 		Node<T> i = head;
 		while(i != null) {
@@ -38,6 +41,30 @@ public class SinglyLinkedList<T> {
 			i = i.next;
 		}
 	}
+	
+	/*
+	 * First question
+	 * 1. Approach: we have some sort memory of what elements have been inserted.
+	 * 2. Approach: we trade space against runtime using a runner O(n^2).
+	 */
+	void removeDuplicates() {
+		// if we use a HashMap this method will be O(n)
+		Node<T> previous = null;
+		Node<T> n = head;
+		HashSet<T> table = new HashSet<T>();
+		while(n != null) {
+			if(table.contains(n.val)) {
+				previous.next = n.next;	// current node is omitted.
+				if(n.next == null) tail = previous;
+				--size;
+			} else {
+				table.add(n.val);
+				previous = n;
+			}
+			n = n.next;
+		}
+	}
+	
 }
 
 class Node<T> {
