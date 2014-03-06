@@ -7,6 +7,7 @@
 2. When the number of unique elements is small, sorting can be in O(n) (à la bucket sort).
 3. Always ask what data the array contains to find out about possible optimizations.
 4. StringBuffer brings down String concatenation to amortized O(n) - instead of O(n^2).
+5. Definition "String rotation": string of same size and identical letter sequence but with arbitrary offset.
 
-Chapter 2: Linked Lists
------------------------
+## Chapter 2: Linked Lists
+
