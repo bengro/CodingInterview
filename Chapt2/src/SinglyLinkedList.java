@@ -65,6 +65,23 @@ public class SinglyLinkedList<T> {
 		}
 	}
 	
+	/*
+	 * Outputs the kth element.
+	 * Iterative approach: We iterate over the linked list with two pointers with k distance between them.
+	 */
+	void findKthElement(int k) {
+		kthElement(head, k);
+	}
+	
+	int kthElement(Node<T> elem, int k) {
+		if(elem == null) return 0;
+		int i = kthElement(elem.next, k) + 1;
+		if(k == i) {
+			System.out.println("The kth element is " + elem.val);
+		}
+		return i;
+	}
+	
 }
 
 class Node<T> {
