@@ -1,9 +1,10 @@
+import java.util.Comparator;
 import java.util.HashSet;
 
 /*
  * This class implements a singly-linked list.
  */
-public class SinglyLinkedList<T> {
+public class SinglyLinkedList<T extends Number> {
 	
 	Node<T> head = null;
 	Node<T> tail = null;
@@ -82,13 +83,49 @@ public class SinglyLinkedList<T> {
 		return i;
 	}
 	
+	/*
+	 * This method partitions this linked list such that nodes < x, come before the returned node.
+	 * All nodes > x, come after the returned node.
+	 */
+	void partition(int x) {
+		Node<T> p = head;
+		if(p == null) return;
+		while((p != null) && (p.next.lessThan(x))) {
+			p = p.next;
+		}
+		Node<T> i = p.next;
+		Node<T> prev = p;
+		
+		while(i != null) {
+			if(i.lessThan(x)) {
+				prev.next = i.next;
+				i.next = p.next;
+				p.next = i;
+				p = i;
+			}
+			prev = i;
+			i = i.next;
+		}
+		// p is the last node < k, p+1 is >= k.
+		Node<T> j = head;
+		while(j != null) {
+			System.out.println("Value:" + j.val);
+			if(j == p) System.out.println("x");
+			j = j.next;
+		}
+	}
 }
 
-class Node<T> {
+class Node<T extends Number> {
 	T val;
 	Node<T> next = null;
 	
 	public Node(T val) {
 		this.val = val;
+	}
+	
+	// evaluates val < rhs
+	public boolean lessThan(int rhs) {
+		return (this.val.intValue() < rhs);
 	}
 }

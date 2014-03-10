@@ -16,7 +16,7 @@ public class SinglyLinkedListTest {
 		SLL.appendTail(10);
 		SLL.appendTail(5);
 		SLL.print();
-		SLL.findKthElement(3);
+		SLL.partition(6);
 	}
 	
 }
