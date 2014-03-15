@@ -12,6 +12,7 @@
 ## Chapter 2: Linked Lists
 1. Runner technique: using two pointers to iterate a linked list. Can for example be used to find the kth element to last, remove duplicates.
 2. Link Lists shift cheap (contrary to Arrays).
+3. Recursion always takes at least O(n) but can enhance singly-linked list into pseudo doubly-linked list.
 
 ## Java notes
 1. Comparisons with == operator or isEqual: == checks whether two variable point to the same reference. isEqual compares the objects values.
