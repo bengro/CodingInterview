@@ -1,6 +1,10 @@
 /*
  * This class supports the managing of three stacks all based on the same array.
  * Assumption: All three stacks are allocated the same size.
+ * 
+ * Problem: we need an aother underlying array. Question: Can we at least minimize
+ * the number of minimums we have to store?
+ * A: We can keep track of them with an additional stack, storing changing minimums.
  */
 public class ThreeStacksOneArray {
 	int[] array;
