@@ -14,5 +14,9 @@
 2. Link Lists shift cheap (contrary to Arrays).
 3. Recursion always takes at least O(n) but can enhance singly-linked list into pseudo doubly-linked list.
 
+# Chapter 3:
+1. Stack API: void push(T val), void pop(), T peek(). All methods have O(1). 
+2. The underlying data structure for stacks can be an Array or Linked List.
+
 ## Java notes
 1. Comparisons with == operator or isEqual: == checks whether two variable point to the same reference. isEqual compares the objects values.
