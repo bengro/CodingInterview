@@ -30,4 +30,9 @@ public class Stack {
 		array[pointer] = val;
 		return 1;
 	}
+	
+	boolean isEmpty() {
+		if(pointer == -1) return true;
+		else return false;
+	}
 }
