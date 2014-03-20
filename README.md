@@ -19,5 +19,23 @@
 2. The underlying data structure for stacks can be an Array or Linked List.
 3. Interesting question: How to sort a stack with just one additional stack. The additional stack always contains sorted element. The input stack is unsorted and is used as buffer.
 
-## Java notes
+## Chapter 4:
+... 
+
+# Questions
+
+## Java / OOP questions
 1. Comparisons with == operator or isEqual: == checks whether two variable point to the same reference. isEqual compares the objects values.
+2. What is inheritance? Classes can inherit methods and variables from a mother class.
+3. What is the difference between interfaces, abstract classes? Interfaces are only templates, abstract can additionally contain implementations.
+
+## Technical Questions
+1. **How does the Java compiler roughly work?** Source code is transformed into a parse tree. A parse tree contains syntactic elements and represents a 1:1 copy of the source code. The parse tree is then transformed into a Abstract Syntax Tree (AST) which omits syntactic details such as semicolons and parentheses. On top of the AST one can run graph traversal algorithms. We can execute the AST by running Depth First Search (DFS) on the expressions and Breadth First Search (BFS) on blocks.
+2. **One advantage of functional programming with recursive functions**: States of a recursion are being automatically cached, which means that recursion becomes a lot more efficient.
+3. **How does the a database compiler roughly work?**: A query serves as input telling the compiler what data is affected. The compiler creates execution plans in form of a trees (query execution tree). Different heuristics are used to elaborate on the most efficient plan, such as WHERE before JOIN. (Join is O(n^2) assuming the data is not sorted, wherease Where is just O(n)).
+4. **Write a program which outputs the first 20 Fibbonacci numbers.** 
+
+## Personal Questions
+1. Why do I want to work for company xxx?
+2. Where do I see myself in a few years time?
+3. What makes me tick?
