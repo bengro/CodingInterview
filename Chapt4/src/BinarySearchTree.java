@@ -1,12 +1,15 @@
+import java.util.Iterator;
+
 /* 
  * This method provides the API for maintaining a binary tree.
  */
 public class BinarySearchTree {
 	
-	Node root = null;
+	BSTNode root = null;
+	int size = 0;
 	
-	Node search(int val) {
-		Node p = root;
+	BSTNode search(int val) {
+		BSTNode p = root;
 		while(p != null && p.value != val) {
 			if(p.value >= val) {
 				p = p.left;
@@ -18,15 +21,17 @@ public class BinarySearchTree {
 	}
 	
 	void insert(int val) {
-		Node newNode = new Node(val);
+		BSTNode newNode = new BSTNode(val);
 		if(root == null) {
 			root = newNode;
+			++size;
 		} else {
-			Node p = root;
+			BSTNode p = root;
 			while(p != null) {
 				if(p.value < val) {
 					if(p.right == null) {
 						p.right = newNode;
+						++size;
 						break;
 					} else {
 						p = p.right;
@@ -34,6 +39,7 @@ public class BinarySearchTree {
 				} else if(p.value > val) {
 					if(p.left == null) {
 						p.left = newNode;
+						++size;
 						break;
 					} else {
 						p = p.left;
@@ -46,7 +52,7 @@ public class BinarySearchTree {
 		}
 	}
 	
-	int delete(Node node) {
+	int delete(BSTNode node) {
 		
 		if(node.left == null && node.right == null) {
 			// disconnect parent with child
@@ -61,7 +67,7 @@ public class BinarySearchTree {
 		return 1;
 	}
 	
-	void preorderPrint(Node node) {
+	void preorderPrint(BSTNode node) {
 		if(node == null) {
 			return;
 		}
@@ -70,7 +76,7 @@ public class BinarySearchTree {
 		preorderPrint(node.right);
 	}
 	
-	void postorderPrint(Node node) {
+	void postorderPrint(BSTNode node) {
 		if(node == null) return;
 		
 		postorderPrint(node.left);
@@ -78,20 +84,19 @@ public class BinarySearchTree {
 		System.out.println(node.value);
 	}
 	
-	void inorderPrint(Node node) {
+	void inorderPrint(BSTNode node) {
 		if(node == null) return;
-		
+		inorderPrint(node.left);
+		System.out.println(node.value);
+		inorderPrint(node.right);
 	}
 	
-}
-
-class Node {
-	Node left;
-	Node right;
-	int value;
+	public Iterator<BSTNode> iterator() {
+		return new BSTIterator(this);
+	}
 	
-	Node(int val) {
-		this.value = val;
+	public int size() {
+		return size;
 	}
 	
 }
