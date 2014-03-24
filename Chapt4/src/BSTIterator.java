@@ -1,11 +1,14 @@
 import java.util.Iterator;
+import java.util.Stack;
 public class BSTIterator implements Iterator<BSTNode> {
-	
-	BSTNode min = null;
+
 	BinarySearchTree bst;
+	Stack<BSTNode> stack;
 	
 	public BSTIterator(BinarySearchTree binarySearchTree) {
 		this.bst = binarySearchTree;
+		stack = new Stack<BSTNode>();
+		inorderPrint(bst.root);
 	}
 
 	/*
@@ -13,22 +16,15 @@ public class BSTIterator implements Iterator<BSTNode> {
 	 */
 	@Override
 	public boolean hasNext() {
-		if(min == null) {
-			// find minimum node.
-			BSTNode p = bst.root;
-			min = p;
+		if(!stack.isEmpty()) {
 			return true;
 		}
-		
-		// find closest node
-		//TODO 
-		return true;
-
+		return false;
 	}
 
 	@Override
 	public BSTNode next() {
-		return min;
+		return stack.pop();
 	}
 
 	@Override
@@ -36,4 +32,11 @@ public class BSTIterator implements Iterator<BSTNode> {
 		// TODO
 	}
 
+	void inorderPrint(BSTNode node) {
+		if(node == null) return;
+		inorderPrint(node.right);
+		stack.push(node);
+		inorderPrint(node.left);
+	}
+	
 }
