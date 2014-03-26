@@ -20,7 +20,10 @@
 3. Interesting question: How to sort a stack with just one additional stack. The additional stack always contains sorted element. The input stack is unsorted and is used as buffer.
 
 ## Chapter 4:
-... 
+1. Balancing Binary Search Tree: When inserting a ordered list into a BST, we will end up having a list. Balancing means reshuffling the tree such that tree is entirely or almost complete.
+2. Red-Black-Tree is an implementation of a balanced BST
+3. Trie is a variant of an n-ary tree in which characters are stored at each node. Each path down the tree may represent a word.
+4. Binary Tree: Tree with maximally two nodes originating from a node. 
 
 # Questions
 
