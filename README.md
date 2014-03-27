@@ -25,6 +25,20 @@
 3. Trie is a variant of an n-ary tree in which characters are stored at each node. Each path down the tree may represent a word.
 4. Binary Tree: Tree with maximally two nodes originating from a node. 
 
+## Chapter 11: Sorting
+1. Large array, small interval of values: Bucket Sort / Radix Sort. O(n).
+2. Bubble sort: pairwise swap two consecutive elements if left > right. Do it until array is sorted. O(n^2).
+3. Selection sort: linear scan finding smallest element. Move it to front. O(n^2).
+4. Mege sort: We create an auxilary array and recursively partition it. We start merging it when the size of the array becomes 1.
+ 
+
+## Chapter 12: Testing
+1. One can test 1) real-world object, 2) piece of software, 3) a function or 4) an existing issue.
+2. Testing a real-world object: 1) Who are our users? 2) What are the use-cases? 3) What are the bounds of use? 4) What are the stress / failure conditions? 5) How to test / speed up the test?
+3. Testing Software: 1) White / Blackbox testing? 2) Who will use it? 3) What are the use cases? 4) What are the bounds? 5) Stress / Failure conditions? 6) How to perform the testing (manual, automated)?
+4. Testing a function: validating input and output. 1) Define the test cases, 2) Define the expected result 3) Write the test.
+
+
 # Questions
 
 ## Java / OOP questions
