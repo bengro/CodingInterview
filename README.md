@@ -39,18 +39,32 @@
 4. Testing a function: validating input and output. 1) Define the test cases, 2) Define the expected result 3) Write the test.
 
 
-# Questions
+# Encountered Interview Questions
 
-## Java / OOP questions
+## Java, OOP questions
 1. Comparisons with == operator or isEqual: == checks whether two variable point to the same reference. isEqual compares the objects values.
 2. What is inheritance? Classes can inherit methods and variables from a mother class.
 3. What is the difference between interfaces, abstract classes? Interfaces are only templates, abstract can additionally contain implementations.
+4. What are reflections?
+5. What is type erasure?
+6. What is encapsulation?
+7. What is new in Java 7, 8?
+8. What are annotations? What types can you pass into one? Is the compiler executing annotations?
+9. What is a Java servlet?
+
+## Misc questions
+1. Hibernate: Given an abstract class and two implementations. Are there 1,2,3 tables? Different ways how hibernate deals with abstract classes.
+2. Hibernate: What is eager / lazy loading? What might be the problem of lazy loading?
+3. When is a XML document mal-formed, when invalid?
+4. What is an XML schema?
+5. Single page application vs Ajax application. What are the differences? How does AJAX work?
 
 ## Technical Questions
 1. **How does the Java compiler roughly work?** Source code is transformed into a parse tree. A parse tree contains syntactic elements and represents a 1:1 copy of the source code. The parse tree is then transformed into a Abstract Syntax Tree (AST) which omits syntactic details such as semicolons and parentheses. On top of the AST one can run graph traversal algorithms. We can execute the AST by running Depth First Search (DFS) on the expressions and Breadth First Search (BFS) on blocks.
 2. **One advantage of functional programming with recursive functions**: States of a recursion are being automatically cached, which means that recursion becomes a lot more efficient.
 3. **How does the a database compiler roughly work?**: A query serves as input telling the compiler what data is affected. The compiler creates execution plans in form of a trees (query execution tree). Different heuristics are used to elaborate on the most efficient plan, such as WHERE before JOIN. (Join is O(n^2) assuming the data is not sorted, wherease Where is just O(n)).
 4. **Write a program which outputs the first 20 Fibbonacci numbers.** 
+5. **Write a program which translates roman numbers to an integer.**
 
 ## Personal Questions
 1. Why do I want to work for company xxx?
