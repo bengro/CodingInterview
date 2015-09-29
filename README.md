@@ -29,7 +29,7 @@
 1. Large array, small interval of values: Bucket Sort / Radix Sort. O(n).
 2. Bubble sort: pairwise swap two consecutive elements if left > right. Do it until array is sorted. O(n^2).
 3. Selection sort: linear scan finding smallest element. Move it to front. O(n^2).
-4. Mege sort: We create an auxilary array and recursively partition it. We start merging it when the size of the array becomes 1.
+4. Mege sort: We create an auxiliary array and recursively partition it. We start merging it when the size of the array becomes 1.
  
 
 ## Chapter 12: Testing
